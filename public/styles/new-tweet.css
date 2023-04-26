@@ -1,11 +1,10 @@
 .new-tweet-section {
-  border-radius: 5px;
   border-color: #888888;
   border-width: 1px;
   box-shadow: 5px 5px 18px #888888;
-  width: 80%;
-  margin: 20px 20%;
-  padding: 15px;
+  width: 90%;
+  margin: 20px 5%;
+  padding: 20px;
 }
 
 .new-tweet-form {
