@@ -1,0 +1,24 @@
+header {
+  height: 520px;
+  width: 100%;
+  padding-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f06c;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.user-name {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+}
