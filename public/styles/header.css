@@ -22,3 +22,8 @@ header {
   color: #FFFFFF;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.user-name h2 {
+  margin: 0;
+  margin-bottom: 3rem;
+}

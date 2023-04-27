@@ -26,6 +26,11 @@ nav {
   text-align: right;
   vertical-align: baseline;
 }
+.new-tweet-link p{
+  margin: 0;
+  margin-top: 3rem;
+  padding: 0;
+}
 
 .new-tweet-icon{
   text-align: right;
