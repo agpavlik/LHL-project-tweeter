@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(() => {
+
 // Test / driver code (temporary). Eventually will get this from the server.
   const tweetData = {
     "user": {
@@ -21,8 +23,8 @@
   const renderTweets = (tweets) => {
     $('#tweets-container').empty(); // remove any existing child nodes before adding new ones
     for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      const $tweet = createTweetElement(tweet); // calls createTweetElement for each tweet
+      $('#tweets-container').append($tweet);  // takes return value and appends it to the tweets container
     }
   };
 
@@ -50,10 +52,30 @@
 
 renderTweets(tweetData)
 
+  // Add a submit handler to the form
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    $.ajax({
+      method: 'POST',
+      url: 'http://localhost:8080/tweets',
+      data: $form.serialize()
+    }).then(() => {
+      loadTweets();
+    });
+  });
 
-
-
-
+  // Make a GET request to load the tweet
+  const loadTweets = () => {
+    $.ajax({
+      method: 'GET',
+      url: 'http://localhost:8080/tweets',
+    }).then((tweet) => {
+      renderTweets(tweet);
+    });
+  };
+  loadTweets();
+  
+});
 
 
 
