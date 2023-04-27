@@ -56,6 +56,8 @@ $(document).ready(() => {
     } else if (inputLength > 140) {
       $(".error-length").addClass("error-show")
     } else {
+      $(".error-empty").removeClass("error-show")
+      $(".error-length").removeClass("error-show")
       $.ajax({
         method: 'POST',
         url: '/tweets',
