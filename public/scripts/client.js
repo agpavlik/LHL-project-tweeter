@@ -41,7 +41,7 @@ $(document).ready(() => {
         ${tweetData.content.text}
       </div>
       <div class="article-footer">
-        <div class="article-footer-date"><p>${tweetData.created_at}</p></div>
+        <div class="article-footer-date"><p>${timeago.format(tweetData.created_at)}</p></div>
         <div class="article-footer-flag"><i class="fa-solid fa-flag"></i></div>
         <div class="article-footer-retweet"><i class="fa-sharp fa-solid fa-retweet"></i></div>
         <div class="article-footer-heart"><i class="fa-solid fa-heart"></i></div>
