@@ -4,9 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(() => {
-
-// Test / driver code (temporary). Eventually will get this from the server.
+  // Test / driver code (temporary). Eventually will get this from the server.
   const tweetData = {
     "user": {
       "name": "Newton",
@@ -19,7 +17,16 @@ $(document).ready(() => {
     "created_at": 1461116232227
   }
 
-// Function takes in an array of tweet objects and then appends each one to the #tweets-container
+
+  // Function safely renders insecure text:
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
+  // Function takes in an array of tweet objects and then appends each one to the #tweets-container
   const renderTweets = (tweets) => {
     $('#tweets-container').empty(); // remove any existing child nodes before adding new ones
     for (const tweet of tweets) {
@@ -28,7 +35,8 @@ $(document).ready(() => {
     }
   };
 
-// Function creates a new tweet element based on database tweetData
+
+  // Function creates a new tweet element based on database tweetData
   const createTweetElement = (tweetData) => {
     const $tweet = $(`
     <article class="article-tweet">
@@ -38,7 +46,7 @@ $(document).ready(() => {
         <div class="article-header-nickname"><p>${tweetData.user.handle}</p></div>
       </div>
       <div class="article-tweet-text">
-        ${tweetData.content.text}
+      <p>${escape(tweetData.content.text)}</p>
       </div>
       <div class="article-footer">
         <div class="article-footer-date"><p>${timeago.format(tweetData.created_at)}</p></div>
@@ -50,7 +58,7 @@ $(document).ready(() => {
     return $tweet;
   };
 
-renderTweets(tweetData)
+  renderTweets(tweetData)
 
   // Add a submit handler to the form
   $form.on('submit', (event) => {
@@ -74,8 +82,7 @@ renderTweets(tweetData)
     });
   };
   loadTweets();
-  
-});
+
 
 
 
