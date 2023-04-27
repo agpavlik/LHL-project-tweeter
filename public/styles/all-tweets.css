@@ -1,4 +1,4 @@
-.tweets-container {
+#tweets-container {
   width: 90%;
   margin: 20px 5%;
   display:flex;
@@ -29,8 +29,8 @@
 .article-header-avatar {
   margin-left: 10px;
   margin-right: 10px;
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 50px;
+  max-height: 50px;
   height: auto;
   width: auto;
 }

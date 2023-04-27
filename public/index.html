@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
@@ -50,8 +51,12 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <!--Create new tweet--> 
+      <!--Create new tweet-->
       <section class="new-tweet-section">
+        <div class="errors">
+          <div class="error-empty"><p><i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i> Your tweet content is too long. <i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i></p></div>
+          <div class="error-length"><p><i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i> You tweet is empty. Please write your tweet. <i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i></p></div>
+        </div>
         <form class="new-tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -61,17 +66,18 @@
           </div>
         </form>
       </section>
-      <section class="tweets-container"> 
+
+      <section id="tweets-container"> 
         <article class="article-tweet">
           <div class="article-header">
             <div class="article-header-avatar">avatar</div>
             <div class="article-header-username">username</div>
             <div class="article-header-nickname">@nickname</div>
           </div>
-          <div class="article-tweet-text">old tweet text - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae optio ipsa earum consequuntur iste, necessitatibus suscipit fugiat commodi recusandae rem architecto repellendus. Nihil, libero! Nobis illo adipisci placeat voluptas excepturi?
+          <div class="article-tweet-text"><p>oNihil, libero! Nobis illo adipisci placeat voluptas excepturi?</p>
           </div>
           <div class="article-footer">
-            <div class="article-footer-date">10 days ago</div>
+            <div class="article-footer-date"><p>10 days ago</p></div>
             <div class="article-footer-flag"><i class="fa-solid fa-flag"></i></div>
             <div class="article-footer-retweet"><i class="fa-sharp fa-solid fa-retweet"></i></div>
             <div class="article-footer-heart"><i class="fa-solid fa-heart"></i></div>

@@ -47,3 +47,25 @@
 .red {
   color: red;
 }
+
+.error-empty {
+  display:none;
+  margin: 5px;
+  padding: 1px;
+  height: 5rem;
+  width: auto;
+  border:red solid 3px;
+  color: red;
+  text-align: center;
+}
+
+.error-length{
+  display:none;
+  margin: 5px;
+  padding: 1px;
+  height: 5rem;
+  width: auto;
+  border:red solid 3px;
+  color: red;
+  text-align: center;
+}
