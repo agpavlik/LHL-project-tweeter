@@ -69,3 +69,7 @@
   color: red;
   text-align: center;
 }
+
+.error-show{
+display: block;
+}

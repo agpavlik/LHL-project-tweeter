@@ -46,27 +46,25 @@ $(document).ready(() => {
   };
 
 
-// Add a submit handler to the form
+  // Add a submit handler to the form
   const $form = $('.new-tweet-form');
   $form.on('submit', (event) => {
     event.preventDefault();
-// errors
-    // if ( tweetData.content.text === "" || tweetData.content.text === null) {
-
-
-    // } else if (tweetData.content.text.length > 140) {
-
-
-    // } else {
+    const inputLength = $('#tweet-text').val().length
+    if (inputLength < 1) {
+      $(".error-empty").addClass("error-show")
+    } else if (inputLength > 140) {
+      $(".error-length").addClass("error-show")
+    } else {
       $.ajax({
         method: 'POST',
         url: '/tweets',
         data: $form.serialize()
       }).then(loadTweets);
-    }  
+    }
   });
 
-// Make a GET request to load the tweet
+  // Make a GET request to load the tweet
   const loadTweets = () => {
     $.ajax({
       method: 'GET',
