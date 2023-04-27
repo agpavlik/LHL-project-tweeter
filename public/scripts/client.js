@@ -52,12 +52,16 @@ $(document).ready(() => {
     event.preventDefault();
     const inputLength = $('#tweet-text').val().length
     if (inputLength < 1) {
-      $(".error-empty").addClass("error-show")
+      $(".error-empty").slideDown( "slow" );
+    //  $(".error-empty").addClass("error-show") // another variant
     } else if (inputLength > 140) {
-      $(".error-length").addClass("error-show")
+      $(".error-length").slideDown( "slow" );
+    //  $(".error-length").addClass("error-show") 
     } else {
-      $(".error-empty").removeClass("error-show")
-      $(".error-length").removeClass("error-show")
+      $(".error-empty").slideUp( "slow" );
+      $(".error-length").slideUp( "slow" );
+     // $(".error-empty").removeClass("error-show") // remove error if text inline with recomendation (for another variant)
+     // $(".error-length").removeClass("error-show")
       $.ajax({
         method: 'POST',
         url: '/tweets',
