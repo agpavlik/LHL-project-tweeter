@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(() => {
 
   // Function safely renders insecure text:
@@ -12,15 +13,12 @@ $(document).ready(() => {
     return div.innerHTML;
   };
 
-
-  // Function takes in an array of tweet objects and then appends each one to the #tweets-container
-  const renderTweets = (tweets) => {
-    $('#tweets-container').empty(); // remove any existing child nodes before adding new ones
-    for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet); // calls createTweetElement for each tweet
-      $('#tweets-container').prepend($tweet); // takes return value and appends it to the tweets container / change for prepend in order to reverse tweet list
-    }
-  };
+  // Function slideToggle works like slideUp-slideDown
+  $(document).ready(function(){
+    $(".slide-toggle").click(function(){
+        $(".new-tweet-section").slideToggle();
+    });
+  });
 
 
   // Function creates a new tweet element based on database tweetData
@@ -45,6 +43,15 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  // Function takes in an array of tweet objects and then appends each one to the #tweets-container
+  const renderTweets = (tweets) => {
+   // $("#tweet-text").trigger("reset");
+    $('#tweets-container').empty(); // remove any existing child nodes before adding new ones
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet); // calls createTweetElement for each tweet
+      $('#tweets-container').prepend($tweet); // takes return value and appends it to the tweets container / change for prepend in order to reverse tweet list
+    }
+  };
 
   // Add a submit handler to the form
   const $form = $('.new-tweet-form');
@@ -75,9 +82,8 @@ $(document).ready(() => {
     $.ajax({
       method: 'GET',
       url: '/tweets',
-    }).then(renderTweets);
+    }).then(renderTweets)
   };
-
   loadTweets();
 
 })

@@ -25,11 +25,12 @@ header {
 h2 {
   margin: 0;
   margin-bottom: 3rem;
+  font-weight: unset;
 }
 
 #user-firstname {
   margin: 0;
   margin-bottom: 3rem;
-  font-weight: bolt;
+  font-weight: bold;
 }
 

@@ -9,7 +9,6 @@
   border:3px solid rgb(204, 193, 35);
 }
 
-
 .new-tweet-form {
   display: flex;
   flex-direction: column;
@@ -40,6 +39,15 @@
   font-size: 0.75em;
   text-align: center;
   font-family: 'Bungee', sans-serif;
+}
+.tweet-btn:hover {
+  background-color: #21367a;
+}
+
+.tweet-btn:active {
+  background-color: #4056A1;
+  box-shadow: 0 5px #C8C8C8;
+  transform: translateY(4px);
 }
 
 .counter {

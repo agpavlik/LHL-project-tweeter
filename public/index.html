@@ -36,7 +36,7 @@
       <div id ="logo">tweeter</div>
       <div class ="nav-right-side">
         <div class ="new-tweet-link"><p><b>Write</b> a new tweet</p></div>
-        <div class ="new-tweet-icon"><i class="fa-solid fa-angles-down" style="color: #d20f0f;"></i></div>
+        <button type="button" class="slide-toggle"><i class="fa-solid fa-angles-down" style="color: #d20f0f;"></i></button>
       </div>
     </nav>
     <!-- User avatar and name-->
@@ -55,7 +55,7 @@
   <!--Errors-->
       <section class="errors">
           <div class="error-length"><p><i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i> Your tweet content is too long. <i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i></p></div>
-          <div class="error-empty"><p><i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i> Your tweet area is empty. Please write your tweet. <i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i></p></div>
+          <div class="error-empty"><p><i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i> Please write your tweet. <i class="fa-solid fa-triangle-exclamation" style="color: #cf0c0c;"></i></p></div>
       </section>
   <!--Create new tweet-->
       <section class="new-tweet-section">  
@@ -75,5 +75,6 @@
 
     <script src="./scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </body>
 </html>
