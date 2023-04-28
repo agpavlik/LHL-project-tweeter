@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  header {
+    padding-top: 50px;
+    margin: 150px 2% 2% 2%;
+    max-width: 30%;
+    max-height: 450px;
+  }
+
+  .container {
+    margin: 130px 1% 1% 1%;
+    max-width:65%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: rgb(204, 193, 35);
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  
+  }}

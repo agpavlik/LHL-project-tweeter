@@ -6,9 +6,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0f06c;
-  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-color: rgb(204, 193, 35);
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 }
 
 .avatar {
@@ -23,7 +22,14 @@ header {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.user-name h2 {
+h2 {
   margin: 0;
   margin-bottom: 3rem;
 }
+
+#user-firstname {
+  margin: 0;
+  margin-bottom: 3rem;
+  font-weight: bolt;
+}
+

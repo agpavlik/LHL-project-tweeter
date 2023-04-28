@@ -50,34 +50,3 @@
 .red {
   color: red;
 }
-
-.errors {
-width: 90%;
-margin: 0 5%;
-}
-
-.error-empty {
-  display:none;
-  margin: 15px 5px 5px;
-  padding: 1px;
-  height: 5rem;
-  width: auto;
-  border:red solid 3px;
-  color: red;
-  text-align: center;
-}
-
-.error-length{
-  display:none;
-  margin: 15px 5px 5px;
-  padding: 1px;
-  height: 5rem;
-  width: auto;
-  border:red solid 3px;
-  color: red;
-  text-align: center;
-}
-
-.error-show{
-display: block;
-}
