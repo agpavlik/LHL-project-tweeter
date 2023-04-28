@@ -45,7 +45,8 @@ $(document).ready(() => {
 
   // Function takes in an array of tweet objects and then appends each one to the #tweets-container
   const renderTweets = (tweets) => {
-   // $("#tweet-text").trigger("reset");
+    // $("#tweet-text").trigger("reset");
+    $('#tweet-text').val('');
     $('#tweets-container').empty(); // remove any existing child nodes before adding new ones
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet); // calls createTweetElement for each tweet

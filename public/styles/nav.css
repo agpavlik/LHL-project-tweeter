@@ -37,6 +37,18 @@ nav {
   border: none;
   background-color: transparent;
   width: 6px;
+  height: 20px;
   text-align: right;
   margin-right: 5rem;
+  position: relative;
+  animation: arrow 1,5s ease infinite alternate-reverse;
+}
+
+@keyframes arrow {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: 10px;
+  }
 }
