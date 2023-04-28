@@ -46,6 +46,8 @@
 }
 
 .article-tweet-text {
+  max-width: 95%;
+  overflow-wrap: break-word;
   font-weight: 75%;
   padding: 10px;
 }
