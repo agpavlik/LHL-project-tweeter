@@ -14,11 +14,9 @@ $(document).ready(() => {
   };
 
   // Function slideToggle works like slideUp-slideDown
-  $(document).ready(function(){
     $(".slide-toggle").click(function(){
         $(".new-tweet-section").slideToggle();
     });
-  });
 
   
   // Function creates a new tweet element based on database tweetData
